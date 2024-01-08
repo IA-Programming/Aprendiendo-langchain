@@ -3,7 +3,7 @@ import streamlit as st
 from langchain.embeddings import OpenAIEmbeddings
 
 st.set_page_config(
-    page_title="Learn LangChain | Embeddings and Vector Stores",
+    page_title="Aprendiendo LangChain | Embeddings and Vector Stores",
     page_icon="📈"
 )
 
@@ -14,7 +14,7 @@ Embeddings are not a concept that belongs to LangChain, but they are a very impo
 in the AI ecosystem and more specifically in Natural Language Processing. Every piece of
 content has to be converted in an embedding in order to be "understood and processed" by a LLM.
 Even when you use the ChatGPT interface, your inputs get converted (under the hood) into embeddings 
-before being processed. We can think to embeddings as vector/numerical rappresentation of content.
+before being processed. We can think to embeddings as vector/numerical reppresentation of content.
 
 As usual, let's make it practical with an example:
 ''')
@@ -26,8 +26,6 @@ embeddings_model = OpenAIEmbeddings(openai_api_key=openai_key)
 
 response = embeddings_model.embed_query(text)
 ''')
-
-openai_key = st.text_input("OpenAI Api Key")
 
 with st.form("embedding"):
 
@@ -66,5 +64,5 @@ embeddings, document loaders and vector stores.
 
 st.divider()
 
-st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
-Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')
+st.write('Un proyecto hecho por [BlazzByte](https://www.buymeacoffee.com/blazzmocompany) - \
+Necesitas IA aprendizaje / Consulta? [Hablanos aqui](mailto:blazzmo.company@gmail.com)')

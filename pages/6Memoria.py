@@ -1,14 +1,7 @@
-import openai
 import streamlit as st
-from langchain.chat_models import ChatOpenAI
-from langchain.chains import ConversationChain
-from langchain.memory import ConversationBufferMemory
-from langchain.memory import ConversationBufferWindowMemory
-from langchain.memory import ConversationTokenBufferMemory
-from langchain.memory import ConversationSummaryMemory
 
 st.set_page_config(
-    page_title="Learn LangChain | Memory",
+    page_title="Aprendiendo LangChain | Memory",
     page_icon="💡"
 )
 
@@ -111,53 +104,7 @@ memory = ConversationSummaryMemory(llm=llm, max_token_limit=100)
 st.info("In the following example, we will use the ConversationChain, another LangChain built-in chain.\
  You can choose the memory type and understand the memory usage by inspecting the memory dump.", icon="ℹ️")
 
-openai_key = st.text_input("OpenAI Api Key")
-
-memory_type = st.selectbox(
-    'Memory Type',
-    ('ConversationBufferMemory', 'ConversationBufferWindowMemory', 'ConversationSummaryMemory')
-)
-
-prompt = st.chat_input("Hey, how can I help you today?")
-
-if prompt:
-
-    if "memory_type" in st.session_state and st.session_state.memory_type != memory_type:
-
-        del st.session_state.conversation
-
-    if "conversation" not in st.session_state:
-
-        llm = ChatOpenAI(openai_api_key=openai_key, temperature=0.0)
-
-        if memory_type == "ConversationBufferWindowMemory":
-
-            memory = ConversationBufferWindowMemory(k=2)
-
-        elif memory_type == "ConversationSummaryMemory":
-
-            memory = ConversationSummaryMemory(llm=llm, max_token_limit=80)
-
-        else:
-
-            memory = ConversationBufferMemory()
-            
-        
-        chain = ConversationChain(llm=llm, memory=memory)
-        
-        st.session_state.conversation = chain
-
-        st.session_state.memory = memory
-
-        st.session_state.memory_type = memory_type
-
-    response = st.session_state.conversation.predict(input=prompt)
-
-    st.write(response)
-
-    st.json(st.session_state.memory.load_memory_variables({}))
-
 st.divider()
 
-st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
-Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')
+st.write('Un proyecto hecho por [BlazzByte](https://www.buymeacoffee.com/blazzmocompany) - \
+Necesitas IA aprendizaje / Consulta? [Hablanos aqui](mailto:blazzmo.company@gmail.com)')

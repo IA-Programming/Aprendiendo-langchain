@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Learn LangChain | Hands-on Projects",
+    page_title="Aprendiendo LangChain | Hands-on Projects",
     page_icon="🙌"
 )
 
@@ -81,5 +81,5 @@ into purpose-specific documents.
 
 st.divider()
 
-st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
-Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')
+st.write('Un proyecto hecho por [BlazzByte](https://www.buymeacoffee.com/blazzmocompany) - \
+Necesitas IA aprendizaje / Consulta? [Hablanos aqui](mailto:blazzmo.company@gmail.com)')

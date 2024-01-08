@@ -1,72 +1,57 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="LangChain Crash Course",
-    page_icon="📚"
-)
+st.set_page_config(page_title="LangChain Curso de iniciantes", page_icon="📚")
 
-st.header('📚 LangChain Crash Course')
+st.header('📚 LangChain Curso Rapido')
 
-st.subheader('Build apps with AI and learn by doing!')
+st.subheader('Construye apps con IA y aprende haciendo!')
 
 st.write('''
-LangChain is a framework to develop AI (artificial intelligence) applications in a
-better and faster way. You can think about it as an abstraction layer designed to
-interact with various LLM (large language models), process and persist data,
-perform complex tasks and take actions using with various APIs. 
+LangChain es un marco para desarrollar aplicaciones de inteligencia artificial (IA) de una manera mejor y más rápida. Puedes pensar en él como una capa de abstracción diseñada para interactuar con varios modelos de lenguaje grandes (LLM), procesar y persistir datos, realizar tareas complejas y tomar acciones utilizando diferentes APIs.
 ''')
 
-st.subheader('Core Components')
+st.subheader('Principales Componentes')
 
 st.write('''
-The main components/tools that LangCHain offers to develop AI applications using LangChain are:
+Los principales componentes/herramientas que LangChain ofrece para desarrollar aplicaciones de IA utilizando LangChain son:
 
-- LLMs (Large Language Models)
-- Prompts / Parsers
-- Chains
-- Embeddings / Vectorstores
-- Memory
-- Agents 
+- LLMs (Modelos de Lenguaje Grandes)
+- Prompts
+- Cadenas
+- Splitters
+- Embeddings / Almacenes de vectores
+- Memoria
+- Agentes
 
-LangChain is available for Python and JavaScript, but in this guide we will focus on the Python version.
+LangChain está disponible para Python y JavaScript, pero en esta guía nos enfocaremos en la versión de Python.
 ''')
 
-st.subheader('Why LangChain')
+st.subheader('Porque LangChain')
 
 st.write('''
-In my opinion, any technology that was adopted on a large scale it's been simplified
-in some way. We are all using credit cards online but no one implements credit card
-processing from scratch, most companies uses Stripe/PayPal/3rd party gateways. 90% of
-websites are based on frameworks and not on plain PHP, Python, Ruby, whatever. Most
-of the tech that we use today is an encapsulation layer of some other lower level
-technolology, and the same goes with AI, we are building tools to lower the learning
-curve and allow a faster and smoother adoption. LangChain is one if these tools!
+En mi opinión, cualquier tecnología que se haya adoptado a gran escala ha sido simplificada de alguna manera. Todos usamos tarjetas de crédito en línea, pero nadie implementa el procesamiento de tarjetas de crédito desde cero; la mayoría de las empresas utilizan Stripe/PayPal/3rd party gateways. El 90% de los sitios web se basan en frameworks y no en PHP, Python, Ruby, o lo que sea. La mayoría de la tecnología que usamos hoy en día es una capa de encapsulación de alguna otra tecnología de nivel inferior, y lo mismo sucede con la IA, estamos construyendo herramientas para reducir la curva de aprendizaje y permitir una adopción más rápida y fluida. ¡LangChain es una de esas herramientas!
 ''')
 
-st.subheader('To learn better')
+st.subheader('Para aprender mejor')
 
 st.write('''
-To better enjoy this LangChain course, you should have a basic understanding of software
-development fundamentals, and ideally some experience with python. If you don't, you can
-check these FreeCodeCamp resources to skill yourself up and come back!
+Para disfrutar mejor de este curso de LangChain, deberías tener un conocimiento básico de los fundamentos del desarrollo de software, y idealmente algo de experiencia con Python. Si no es así, puedes consultar estos recursos de FreeCodeCamp para mejorar tus habilidades y luego regresar.
 
-
-- [Learn Python](https://www.freecodecamp.org/news/learn-python-free-python-courses-for-beginners/)
-- [Intro to Programming](https://youtu.be/zOjov-2OZ0E)
+- [Learn Python](https://www.youtube.com/watch?v=nKPbfIU442g)
+- [Intro to Programming](https://www.youtube.com/watch?v=oHHsLTV7l3E)
 ''')
 
-st.subheader('Credits')
+st.subheader('Creditos')
 
 st.write('''
-All the frameworks used in this mini-course belong to their owners:
+Todos los frameworks usado en este mini-curso pertenece a su propietarios:
 
 - [LangChain](https://www.langchain.com/)
 - [Streamlit](https://streamlit.io/)
 - [OpenAI API](https://platform.openai.com/docs/api-reference)
-- [DeepInfra](https://deepinfra.com/)
 ''')
 
 st.divider()
 
-st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
-Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')
+st.write('Un proyecto hecho por [BlazzByte](https://www.buymeacoffee.com/blazzmocompany) - \
+Necesitas IA aprendizaje / Consulta? [Hablanos aqui](mailto:blazzmo.company@gmail.com)')
